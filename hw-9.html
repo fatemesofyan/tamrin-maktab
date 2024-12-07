@@ -1,13 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <div>test name</div>
-    <div>test & last name</div>
-
-</body>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./hw9.css" />
+  </head>
+  <body>
+    <div class="w-full bg-[#6200ea] min-h-[70px] flex flex-row justify-between">
+      <div class="flex flex-row p-4 gap-2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-list w-8 h-8 text-white"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+          />
+        </svg>
+        <h2 class="text-[18px] font-bold text-white">My TO-DO Tasks</h2>
+      </div>
+      <div class="flex flex-row gap-4 p-4">
+        <div>
+          <div class="flex w-full">
+            <button
+              type="submit"
+              class="p-3 bg-white text-white rounded-l-md border-none focus:outline-none"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi w-4 h-4 text-blue-700"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                />
+              </svg>
+            </button>
+            <input
+              type="text"
+              placeholder="Search..."
+              class="w-full pl-10 pr-4 border-none rounded-r-md text-sm text-white-700 placeholder:text-blue-700 focus:outline-none"
+            />
+          </div>
+        </div>
+        <div class="p-1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-plus-circle-fill w-7 h-7 text-white"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z"
+            />
+          </svg>
+        </div>
+        <button type="submit" id="addButton">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-funnel-fill w-7 h-7 text-white"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </body>
 </html>
