@@ -188,9 +188,9 @@ saveTasksToLocalStorage();
 
 new Pikaday({
   field: inputDeadline,
-  format: "jYYYY/jMM/jDD", // فرمت تاریخ
-  calendarType: "persian",
-  observer: true, // حالت واکنش‌گرا
+  format: 'YYYY/MM/DD',
+  calendarType: 'Persian',
+  observer: true, 
 });
 
 function showModal() {
