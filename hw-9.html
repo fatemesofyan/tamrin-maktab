@@ -6,6 +6,11 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./hw9.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/pikaday-jalali/css/pikaday.css"
+    />
+    
   </head>
   <body>
     <div class="w-full bg-[#6200ea] min-h-[70px] flex flex-row justify-between">
@@ -48,25 +53,11 @@
             <input
               type="text"
               placeholder="Search..."
-              class="w-full pl-10 pr-4 border-none rounded-r-md text-sm text-white-700 placeholder:text-blue-700 focus:outline-none"
+              class="w-full pl-8 pr-4 border-none rounded-r-md text-sm text-white placeholder:text-blue-700 focus:outline-none"
             />
           </div>
         </div>
         <div class="p-1">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-plus-circle-fill w-7 h-7 text-white"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z"
-            />
-          </svg>
-        </div>
-        <button type="submit" id="addButton">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -79,8 +70,194 @@
               d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5z"
             />
           </svg>
+        </div>
+        <button type="submit" id="addButton">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-plus-square-fill text-white w-7 h-7"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0"
+            />
+          </svg>
         </button>
       </div>
     </div>
+    <div>
+      <table class="table border-collapse w-full">
+        <thead>
+          <tr>
+            <th>Task Name</th>
+            <th>Priority</th>
+            <th>Status</th>
+            <th>Deadline</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <tr>
+            <td id="tableDatarowOne">walk the dog</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="flex gap-2 justify-center">
+              <button class="bg-red-600 p-2 rounded">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-trash-fill text-white"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"
+                  />
+                </svg>
+              </button>
+              <button class="bg-blue-600 rounded p-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-pen-fill text-white"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001"
+                  />
+                </svg>
+              </button>
+              <button class="bg-gray-500 p-2 rounded">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-eye-fill text-white"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />
+                  <path
+                    d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"
+                  />
+                </svg>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- modal form  -->
+
+    <div
+      class="hidden bg-[#33333399] w-full h-full fixed top-0 left-0 z-10"
+      id="backDrop"
+    ></div>
+    <div
+      class="hidden w-[300px] h-[400px] bg-[#f7f9ff] rounded-lg p-5 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
+      id="modal"
+    >
+      <button
+        id="closeModal"
+        class="text-4xl font-bold w-8 h-8 text-gray-400 hover:text-black absolute -mt-4 right-2"
+      >
+        &times;
+      </button>
+
+      <div class="flex flex-col justify-center items-center gap-2">
+        <h2 class="text-2xl font-bold py-4">Task management</h2>
+        <input
+          id="inputTaskname"
+          type="text"
+          placeholder="taskName"
+          class="border-2 p-2 rounded w-full focus:outline-blue-400"
+        />
+        <div class="flex flex-row w-full gap-2">
+          <label for="selectBoxStatus" class="rounded text-black p-1 font-bold"
+            >StausTask:</label
+          >
+          <select name="" id="selectBoxStatus" class="w-full rounded">
+            <option value="Todo" selected>Todo</option>
+            <option value="Doing">Doing</option>
+            <option value="Done">Done</option>
+          </select>
+        </div>
+
+        <div class="flex flex-row w-full gap-6">
+          <label
+            for="selectBoxPriority"
+            class="rounded text-black p-1 font-bold"
+            >Priority:</label
+          >
+          <select name="" id="selectBoxPriority" class="rounded w-full">
+            <option value="Low" selected>Low</option>
+            <option value=" Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+        </div>
+        <div class="flex flex-row gap-3">
+          <label for="inputDeadline" class="rounded text-black p-1 font-bold">
+            Deadline:
+          </label>
+          <input
+            id="inputDeadline"
+            type="text"
+            class="border-2 rounded-md w-full focus:outline-blue-400 p-1"
+          />
+        </div>
+        <div class="py-6">
+          <button
+            id="btnSubmit"
+            type="submit"
+            class="bg-blue-900 border-none text-white rounded px-20 py-3 text-md"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- is loading -->
+    <div
+      id="loading"
+      class="hidden fixed inset-0 bg-[#55555599] z-50 flex items-center justify-center"
+    >
+      <img
+        src="./assets/img/Spin@1x-1.0s-200px-200px (1).gif"
+        alt="isloading"
+        class="w-25 h-25"
+      />
+    </div>
+
+    <!-- view modal task -->
+
+    <div
+      id="viewModal"
+      class="hidden fixed inset-0 bg-gray-500 bg-opacity-50 flex justify-center items-center z-50"
+    >
+      <div class="bg-white p-6 rounded-lg w-1/4 relative">
+        <button
+          id="closeViewModal"
+          class="text-4xl font-bold w-8 h-8 text-gray-400 hover:text-black absolute -mt-4 right-2"
+        >
+          &times;
+        </button>
+        <h2 id="modalTitle" class="text-2xl font-bold mb-4"></h2>
+        <p id="modalDescription" class="text-gray-800 mb-4"></p>
+        <p id="modalDetails" class="text-gray-800 mb-4"></p>
+        <p id="modalDate" class="text-gray-800"></p>
+      </div>
+    </div>
+
+    <!-- Pikaday Jalaali-->
+    <script src="https://cdn.jsdelivr.net/npm/moment-jalaali"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pikaday-jalali"></script>
+
+    <script src="./hw9.js"></script>
   </body>
 </html>

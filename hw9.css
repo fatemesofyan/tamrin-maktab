@@ -1,3 +1,89 @@
+.table th {
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-top: none;
+    text-align: center;
+  }
+  .table th:nth-child(1) {
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-top: none;
+    text-align: left;
+  }
+  .table td {
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-top: none;
+    text-align: center;
+  }
+  .table td:nth-child(1)  {
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-top: none;
+    text-align: left;
+  }
+  .status-todo {
+    color: white;
+    background-color: rgb(209, 1, 1);
+    border-radius: 20px;
+    margin: 10px;
+    padding: 5px 10px;
+    
+    font-weight: bold;
+    text-align: center;
+}
 
+.status-doing {
+    color: black;
+    background-color: rgb(247, 180, 56);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-align: center;
+}
 
+.status-done {
+    color: white;
+    background-color: rgb(2, 97, 2);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.prioprity-low{
+  color: rgb(10, 10, 10);
+  background-color: rgb(167, 166, 166);
+  border-radius: 20px;
+  margin: 10px;
+  padding: 5px 10px;
   
+  font-weight: bold;
+  text-align: center;
+}
+
+.prioprity-medium{
+  color: black;
+  background-color: rgb(247, 180, 56);
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+.prioprty-high{
+  color: white;
+  background-color: rgb(209, 1, 1);
+  border-radius: 20px;
+  margin: 10px;
+  padding: 5px 10px;
+  
+  font-weight: bold;
+  text-align: center;
+}
+.deadline {
+ border: 2px solid rgb(195, 195, 238);
+ border-radius: 20px;
+ padding: 5px;
+  text-align: center; 
+color: rgb(2, 2, 2);
+
+}
